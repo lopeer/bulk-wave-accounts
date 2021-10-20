@@ -4,7 +4,7 @@
   "description": "Bulk Wave Account Generator",
   "main": "index.js",
   "bin": {
-    "bulkwave":"./index.js"
+    "bulkwave": "./index.js"
   },
   "scripts": {
     "generate": ""
