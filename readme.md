@@ -12,6 +12,9 @@ npm install -g bulkwave
 bulkwave <numberOfAddresses>
 ```
 
-e.g bulkwave 5000
+e.g 
+```sh 
+bulkwave 5000
+```
 
 This will generate 500 wave blockchain accounts with Private keys, public, keys, testnet address, mainnet addresses, and passphrase
