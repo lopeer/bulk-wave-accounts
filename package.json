@@ -1,0 +1,17 @@
+{
+  "name": "bulkwave",
+  "version": "1.0.0",
+  "description": "Bulk Wave Account Generator",
+  "main": "index.js",
+  "bin": {
+    "bulkwave":"./index.js"
+  },
+  "scripts": {
+    "generate": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@waves/ts-lib-crypto": "^1.4.4-beta.1"
+  }
+}
