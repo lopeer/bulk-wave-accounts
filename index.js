@@ -9,23 +9,21 @@ if (!numberOfAccounts) {
 
 const generateAddresses = (numberOfAccounts) => {
     try {
-        const seed = libCrypto.randomSeed() // or input your existing seed
-        const sk = libCrypto.privateKey(seed)
-        const pk = libCrypto.publicKey(seed)
-        const addressBase58 = libCrypto.address(seed) // address for Mainnet
-        const addressTestnetBase58 = libCrypto.address(seed, 'T') // address for Testnet
-
-        const account = {
-            passPhrase: seed,
-            address: addressBase58,
-            privateKey: sk,
-            publicKey: pk,
-            testnetAddress: addressTestnetBase58
-        }
-
         let accounts = []
+        for (let i = 0; i <= numberOfAccounts; i++) {
+            const seed = libCrypto.randomSeed() // or input your existing seed
+            const sk = libCrypto.privateKey(seed)
+            const pk = libCrypto.publicKey(seed)
+            const addressBase58 = libCrypto.address(seed) // address for Mainnet
+            const addressTestnetBase58 = libCrypto.address(seed, 'T') // address for Testnet
 
-        for (let i=0; i<=numberOfAccounts; i++){
+            const account = {
+                passPhrase: seed,
+                address: addressBase58,
+                privateKey: sk,
+                publicKey: pk,
+                testnetAddress: addressTestnetBase58
+            }
             accounts.push(account)
         }
 
@@ -33,8 +31,8 @@ const generateAddresses = (numberOfAccounts) => {
         fs.writeFileSync('accounts.json', data);
         console.log(`${numberOfAccounts} Accounts generated successfully`);
 
-    } catch(error) {
-        return  error
+    } catch (error) {
+        return error
     }
 }
 

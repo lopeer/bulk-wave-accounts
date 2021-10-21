@@ -1,6 +1,6 @@
 {
   "name": "bulkwave",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Bulk Wave Account Generator",
   "main": "index.js",
   "bin": {
