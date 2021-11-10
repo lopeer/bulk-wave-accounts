@@ -2,12 +2,12 @@
 const libCrypto = require('@waves/ts-lib-crypto')
 const fs = require('fs');
 const numberOfAccounts = process.argv[2];
-
+const tokenName = process.argv[3];
 if (!numberOfAccounts) {
-    return console.log('Please enter number of accounts to generate as the first argument')
+    return console.log('Please enter number of accounts to generate as the first argument and the token name as the second argument')
 }
 
-const generateAddresses = (numberOfAccounts) => {
+const generateAddresses = (numberOfAccounts, tokenName) => {
     try {
         let accounts = []
         for (let i = 0; i <= numberOfAccounts; i++) {
@@ -22,6 +22,8 @@ const generateAddresses = (numberOfAccounts) => {
                 address: addressBase58,
                 privateKey: sk,
                 publicKey: pk,
+                blockchain:"WAVES",
+                coin:tokenName,
                 testnetAddress: addressTestnetBase58
             }
             accounts.push(account)
