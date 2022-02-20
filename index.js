@@ -31,7 +31,7 @@ const generateAddresses = (numberOfAccounts, tokenName) => {
 
         let data = JSON.stringify(accounts);
         fs.writeFileSync('accounts.json', data);
-        console.log(`${numberOfAccounts} Accounts generated successfully`);
+        console.log(`${numberOfAccounts} ${tokenName} Accounts generated successfully`);
 
     } catch (error) {
         return error
