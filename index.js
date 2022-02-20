@@ -10,7 +10,7 @@ if (!numberOfAccounts) {
 const generateAddresses = (numberOfAccounts, tokenName) => {
     try {
         let accounts = []
-        for (let i = 0; i <= numberOfAccounts; i++) {
+        for (let i = 1; i <= numberOfAccounts; i++) {
             const seed = libCrypto.randomSeed() // or input your existing seed
             const sk = libCrypto.privateKey(seed)
             const pk = libCrypto.publicKey(seed)

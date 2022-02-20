@@ -14,7 +14,7 @@ bulkwave <numberOfAddresses> <tokenName>
 
 e.g 
 ```sh 
-bulkwave 5000
+bulkwave 5000 waves
 ```
 
 This will generate 500 wave blockchain accounts with Private keys, public, keys, testnet address, mainnet addresses, and tokenName, and passphrase
