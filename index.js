@@ -4,7 +4,10 @@ const fs = require('fs');
 const numberOfAccounts = process.argv[2];
 const tokenName = process.argv[3];
 if (!numberOfAccounts) {
-    return console.log('Please enter number of accounts to generate as the first argument and the token name as the second argument')
+    return console.log('Please enter number of accounts to generate as the first argument')
+}
+if (!tokenName) {
+    return console.log('Please enter token name as the second argument')
 }
 
 const generateAddresses = (numberOfAccounts, tokenName) => {
